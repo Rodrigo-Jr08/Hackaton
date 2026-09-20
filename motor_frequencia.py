@@ -2,14 +2,14 @@ import sqlite3
 from datetime import datetime
 
 # ================= CONFIGURAÇÕES DA REGRA DE NEGÓCIO =================
-DURACAO_AULA_MINUTOS = 55
+DURACAO_AULA_MINUTOS = 110
 PERCENTUAL_MINIMO = 0.50  # 50% da aula
 MINUTOS_NECESSARIOS = DURACAO_AULA_MINUTOS * PERCENTUAL_MINIMO # 27.5 minutos
 
 # DICA PARA O TESTE/APRESENTAÇÃO:
 # Se você quiser testar rápido sem esperar 27 minutos, mude MINUTOS_TESTE_DEMO para True.
 MODO_DEMO = False
-LIMIAR_MINUTOS_DEMO = 1  # 1 minuto na sala já dá presença para a banca ver funcionar!
+LIMIAR_MINUTOS_DEMO = 0.5  # 1 minuto na sala já dá presença para a banca ver funcionar!
 # =====================================================================
 
 def criar_tabela_frequencia(conn):
